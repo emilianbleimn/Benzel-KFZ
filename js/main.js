@@ -1,5 +1,5 @@
 /* =========================================================
-   Benzel KFZ – KFZ-Gutachten · main.js
+   Waldemar Benzel – KFZ-Gutachten & Fahrzeugbewertungen · main.js
    ========================================================= */
 (function () {
   "use strict";
@@ -194,7 +194,7 @@
         `Nachricht:\n${message}\n`;
 
       const mailto =
-        "mailto:info@benzel-kfz.de" +
+        "mailto:info@benzel-gutachten.de" +
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
 

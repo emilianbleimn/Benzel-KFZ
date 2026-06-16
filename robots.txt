@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://benzel-kfz.de/sitemap.xml
+Sitemap: https://benzel-gutachten.de/sitemap.xml
