@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 104" role="img" aria-label="Waldemar Benzel – Kfz-Gutachten & Fahrzeugbewertungen">
+  <defs>
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".16" stop-color="#dcebfb"/>
+      <stop offset=".5" stop-color="#2f7bd6"/>
+      <stop offset=".78" stop-color="#1356a8"/>
+      <stop offset="1" stop-color="#0c3b7d"/>
+    </linearGradient>
+    <linearGradient id="swoosh" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#bcd8f4"/>
+      <stop offset=".5" stop-color="#2f7bd6"/>
+      <stop offset="1" stop-color="#0e4d99"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Swoosh -->
+  <path d="M214 60 C 268 30, 330 22, 396 30 C 338 38, 286 52, 244 76 C 236 70, 226 64, 214 60 Z" fill="url(#swoosh)"/>
+  <path d="M250 84 C 296 64, 344 56, 392 60 C 350 66, 312 76, 282 92 C 274 89, 263 86, 250 84 Z" fill="url(#swoosh)" opacity=".55"/>
+
+  <!-- Wordmark -->
+  <text x="10" y="30" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="19" letter-spacing="6.5" fill="#1c3a6b">WALDEMAR</text>
+  <text x="6" y="88" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="64" letter-spacing="-1" fill="url(#chrome)" stroke="#0b2f63" stroke-width="1">BENZEL</text>
+</svg>
