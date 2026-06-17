@@ -134,7 +134,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.15; letter-spacin
 /* ---------- Header ---------- */
 .header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(255, 255, 255, .9);
+  background: #ffffff;
   backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid transparent;
   transition: box-shadow .25s, border-color .25s;
@@ -143,10 +143,10 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.15; letter-spacin
 .header__inner { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 20px; }
 
 .brand { display: inline-flex; align-items: center; gap: 11px; }
-.brand__logo { height: 48px; width: auto; display: block; }
+.brand__logo { height: 56px; width: auto; display: block; }
 /* Footer: Logo auf hellem „Schild", damit es auf dunklem Grund lesbar bleibt */
 .brand__plate { display: inline-grid; place-items: center; padding: 9px 14px; background: #fff; border-radius: 14px; box-shadow: var(--shadow-sm); }
-.brand--footer .brand__logo { height: 40px; }
+.brand--footer .brand__logo { height: 46px; }
 
 .nav { display: flex; align-items: center; gap: 6px; }
 .nav__link {
