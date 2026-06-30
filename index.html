@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Waldemar Benzel · KFZ-Gutachten & Fahrzeugbewertungen | Kfz-Sachverständigenbüro</title>
-  <meta name="description" content="Unabhängiges Kfz-Sachverständigenbüro Waldemar Benzel: KFZ-Gutachten nach Unfall & Schaden, Fahrzeugbewertungen, Gebrauchtwagen-Check & Oldtimer-Gutachten. Schnell, neutral & deutschlandweit vor Ort." />
+  <meta name="description" content="Unabhängiges Kfz-Sachverständigenbüro Waldemar Benzel: KFZ-Gutachten nach Unfall & Schaden, Fahrzeugbewertungen, Gebrauchtwagen-Check & Oldtimer-Gutachten. Schnell, neutral & vor Ort im Umkreis von ca. 100 km um Plankstadt." />
   <meta name="theme-color" content="#0a2347" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Waldemar Benzel · KFZ-Gutachten & Fahrzeugbewertungen" />
-  <meta property="og:description" content="Unabhängige KFZ-Gutachten nach Unfall & Schaden. Schnell, neutral und deutschlandweit vor Ort." />
+  <meta property="og:description" content="Unabhängige KFZ-Gutachten nach Unfall & Schaden. Schnell, neutral und vor Ort im Umkreis von ca. 100 km um Plankstadt." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
 
@@ -42,7 +42,11 @@
       "addressLocality": "Plankstadt",
       "addressCountry": "DE"
     },
-    "areaServed": "DE",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 49.3958, "longitude": 8.6172 },
+      "geoRadius": "100000"
+    },
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -77,7 +81,7 @@
         <h1 class="hero__title">KFZ-Gutachten &amp; <span>Fahrzeugbewertungen</span></h1>
         <p class="hero__lead">
           Wir prüfen Ihr Fahrzeug nach Unfall oder Schaden und erstellen unabhängige,
-          gerichtsfeste Gutachten – schnell, neutral und deutschlandweit vor Ort.
+          gerichtsfeste Gutachten – schnell, neutral und vor Ort im Umkreis von rund 100 km um Plankstadt.
         </p>
         <div class="hero__actions">
           <a href="tel:+4917660977944" class="btn btn--primary btn--lg">
@@ -89,7 +93,7 @@
         <ul class="hero__usps">
           <li><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 100 % unabhängig</li>
           <li><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Schnelle Termine</li>
-          <li><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Deutschlandweit vor Ort</li>
+          <li><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Vor Ort im 100-km-Umkreis</li>
         </ul>
       </div>
     </section>
@@ -195,6 +199,10 @@
           <div class="contact__item">
             <span class="contact__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
             <span><strong>Öffnungszeiten</strong>Mo–Fr 8:00–18:00 Uhr · 24 h Unfallhilfe</span>
+          </div>
+          <div class="contact__item">
+            <span class="contact__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <span><strong>Einzugsgebiet</strong>Plankstadt &amp; Umgebung · ca. 100 km Umkreis</span>
           </div>
         </div>
 
