@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Platzhalter – Bild folgt">
+  <rect width="640" height="480" fill="#eef5fc"/>
+  <rect x="1.5" y="1.5" width="637" height="477" fill="none" stroke="#cfe0f2" stroke-width="3"/>
+  <g fill="none" stroke="#8fb4dd" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="232" y="168" width="176" height="138" rx="16"/>
+    <circle cx="272" cy="206" r="14"/>
+    <path d="M246 300 L292 252 L324 280 L352 258 L394 300"/>
+  </g>
+  <text x="320" y="356" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="30" fill="#4d6b94">Bild folgt</text>
+  <text x="320" y="392" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#88a0bf">Referenz / Gutachten</text>
+</svg>
