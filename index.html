@@ -59,6 +59,11 @@
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
+  <!-- Lade-Vorschau (Splash) -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <img class="preloader__logo" src="assets/logo.png" onerror="this.onerror=null;this.src='assets/logo.svg'" alt="" width="240" height="126" />
+  </div>
+
   <!-- ===== Header ===== -->
   <header class="header is-scrolled" id="top">
     <div class="container header__inner">
@@ -228,6 +233,33 @@
     // Aktuelles Jahr im Footer
     var y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
+
+    // Lade-Vorschau (Splash) ausblenden – mit Mindestanzeigedauer & Sicherheits-Fallback
+    (function () {
+      var pre = document.getElementById("preloader");
+      if (!pre) return;
+      var start = Date.now(), MIN = 700;
+      function hide() {
+        var wait = Math.max(0, MIN - (Date.now() - start));
+        setTimeout(function () { pre.classList.add("is-hidden"); }, wait);
+      }
+      if (document.readyState === "complete") hide();
+      else window.addEventListener("load", hide);
+      setTimeout(hide, 2500); // Fallback, falls 'load' nicht feuert
+    })();
+
+    // Klick aufs Logo: sanft nach ganz oben (Startseite) – Desktop & Mobile
+    (function () {
+      var brand = document.querySelector(".brand");
+      if (!brand) return;
+      brand.addEventListener("click", function (e) {
+        var href = brand.getAttribute("href") || "";
+        if (href.charAt(0) === "#") {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+    })();
   </script>
 </body>
 </html>
