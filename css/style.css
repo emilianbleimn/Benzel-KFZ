@@ -462,12 +462,12 @@ section[id] { scroll-margin-top: 96px; }
   .preloader { transition: none; }
 }
 
-/* ---------- Mobile: mehr Abstand zum Rand für ALLE Texte ---------- */
+/* ---------- Mobile: deutlich mehr Abstand zum Rand für ALLE Texte ---------- */
 @media (max-width: 600px) {
-  /* größerer Seitenrand für alle Sektionen */
-  .container { padding-left: 26px; padding-right: 26px; }
-  /* Hero-Überschrift passt mit Luft zum Rand auf jeder Handybreite */
-  .hero__title { font-size: clamp(1.4rem, 7vw, 2rem); line-height: 1.24; }
+  /* großzügiger Seitenrand für alle Sektionen */
+  .container { padding-left: 32px; padding-right: 32px; }
+  /* Hero-Überschrift passt mit klarer Luft zum Rand auf jeder Handybreite */
+  .hero__title { font-size: clamp(1.3rem, 6.3vw, 1.75rem); line-height: 1.26; }
   .hero__lead { font-size: 1rem; }
-  .hero__inner { padding-top: 46px; padding-bottom: 46px; }
+  .hero__inner { padding-top: 44px; padding-bottom: 44px; }
 }
