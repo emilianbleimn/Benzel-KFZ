@@ -465,9 +465,9 @@ section[id] { scroll-margin-top: 96px; }
 /* ---------- Mobile: deutlich mehr Abstand zum Rand für ALLE Texte ---------- */
 @media (max-width: 600px) {
   /* großzügiger Seitenrand für alle Sektionen */
-  .container { padding-left: 32px; padding-right: 32px; }
+  .container { padding-left: 26px; padding-right: 26px; }
   /* Hero-Überschrift passt mit klarer Luft zum Rand auf jeder Handybreite */
-  .hero__title { font-size: clamp(1.35rem, 6.8vw, 1.78rem); line-height: 1.24; }
+  .hero__title { font-size: clamp(1.4rem, 7vw, 1.9rem); line-height: 1.24; }
   /* Fließtext als schmalere, zentrierte Spalte → klarer Abstand zum Rand */
   .hero__lead { font-size: 0.98rem; max-width: 290px; line-height: 1.6; }
   .hero__inner { padding-top: 44px; padding-bottom: 44px; }
