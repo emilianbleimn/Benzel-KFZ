@@ -461,3 +461,10 @@ section[id] { scroll-margin-top: 96px; }
   .preloader__logo { animation: none; }
   .preloader { transition: none; }
 }
+
+/* ---------- Mobile: Hero-Text luftiger, mehr Abstand zum Rand ---------- */
+@media (max-width: 600px) {
+  .hero__title { font-size: clamp(1.5rem, 7vw, 2.05rem); line-height: 1.22; }
+  .hero__lead { font-size: 1rem; }
+  .hero__inner { padding-top: 48px; padding-bottom: 48px; }
+}
