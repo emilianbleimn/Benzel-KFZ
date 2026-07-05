@@ -468,6 +468,7 @@ section[id] { scroll-margin-top: 96px; }
   .container { padding-left: 32px; padding-right: 32px; }
   /* Hero-Überschrift passt mit klarer Luft zum Rand auf jeder Handybreite */
   .hero__title { font-size: clamp(1.3rem, 6.3vw, 1.75rem); line-height: 1.26; }
-  .hero__lead { font-size: 1rem; }
+  /* Fließtext als schmalere, zentrierte Spalte → klarer Abstand zum Rand */
+  .hero__lead { font-size: 0.98rem; max-width: 290px; line-height: 1.6; }
   .hero__inner { padding-top: 44px; padding-bottom: 44px; }
 }
