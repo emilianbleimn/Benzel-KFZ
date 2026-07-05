@@ -462,9 +462,12 @@ section[id] { scroll-margin-top: 96px; }
   .preloader { transition: none; }
 }
 
-/* ---------- Mobile: Hero-Text luftiger, mehr Abstand zum Rand ---------- */
+/* ---------- Mobile: mehr Abstand zum Rand für ALLE Texte ---------- */
 @media (max-width: 600px) {
-  .hero__title { font-size: clamp(1.5rem, 7vw, 2.05rem); line-height: 1.22; }
+  /* größerer Seitenrand für alle Sektionen */
+  .container { padding-left: 26px; padding-right: 26px; }
+  /* Hero-Überschrift passt mit Luft zum Rand auf jeder Handybreite */
+  .hero__title { font-size: clamp(1.4rem, 7vw, 2rem); line-height: 1.24; }
   .hero__lead { font-size: 1rem; }
-  .hero__inner { padding-top: 48px; padding-bottom: 48px; }
+  .hero__inner { padding-top: 46px; padding-bottom: 46px; }
 }
