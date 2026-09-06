@@ -462,6 +462,26 @@ section[id] { scroll-margin-top: 96px; }
   .preloader { transition: none; }
 }
 
+/* ---------- Formular-CTA, Header-Buttons, Marken-Zeile ---------- */
+.header__actions { display: flex; align-items: center; gap: 10px; }
+.btn--dark { background: var(--navy-900); color: #fff; box-shadow: 0 8px 20px rgba(10,35,71,.28); }
+.btn--dark:hover { background: var(--navy-800); box-shadow: 0 12px 26px rgba(10,35,71,.36); }
+
+/* „Benzel" als eigene Zeile über der Hero-Überschrift */
+.hero__brand { display: block; color: var(--blue-light); }
+
+/* Kontakt-CTA: zwei Buttons zentriert, umbrechend */
+.contact-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 32px; }
+
+/* Kompakte Button-Labels auf kleinen Screens */
+.u-only-sm { display: none; }
+@media (max-width: 600px) {
+  .u-hide-sm { display: none; }
+  .u-only-sm { display: inline; }
+  /* Auf dem Handy im Header nur der Formular-Button – Telefon steht im Hero */
+  .header__phone { display: none; }
+}
+
 /* ---------- Mobile: deutlich mehr Abstand zum Rand für ALLE Texte ---------- */
 @media (max-width: 600px) {
   /* großzügiger Seitenrand für alle Sektionen */
