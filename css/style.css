@@ -477,6 +477,7 @@ section[id] { scroll-margin-top: 96px; }
 .contact-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 32px; }
 
 /* Kompakte Button-Labels auf kleinen Screens */
+.nowrap { white-space: nowrap; }
 .u-only-sm { display: none; }
 @media (max-width: 600px) {
   .u-hide-sm { display: none; }
@@ -489,11 +490,28 @@ section[id] { scroll-margin-top: 96px; }
 @media (max-width: 600px) {
   /* großzügiger Seitenrand für alle Sektionen */
   .container { padding-left: 18px; padding-right: 18px; }
-  /* Hero-Überschrift passt mit klarer Luft zum Rand auf jeder Handybreite */
-  .hero__title { font-size: clamp(1.5rem, 7.5vw, 2.05rem); line-height: 1.22; }
+
+  /* Die Hero-Spalte muss schrumpfen dürfen. Ohne min-width:0 zieht der lange,
+     nicht umbrechende Button-Text („Schaden / Bewertung anmelden") die
+     Grid-Spalte auf ~347px auf – auf 320/360px-Handys wird dann rechts
+     alles abgeschnitten. */
+  .hero__inner > * { min-width: 0; }
+  /* Lange CTA-Labels dürfen umbrechen statt über den Rand zu ragen.
+     Der kurze Header-Button bleibt bewusst einzeilig. */
+  .btn { max-width: 100%; }
+  .hero__actions .btn, .contact-cta .btn { white-space: normal; text-align: center; }
+
+  /* Überschrift so groß wie möglich, aber das längste Wort
+     („Fahrzeugbewertungen") behält auf jeder Breite Luft zum Rand. */
+  .hero__title { font-size: clamp(1.15rem, calc((100vw - 48px) / 11.9), 2.05rem); line-height: 1.22; }
   /* Fließtext als schmalere, zentrierte Spalte → klarer Abstand zum Rand */
   .hero__lead { font-size: 0.98rem; max-width: 290px; line-height: 1.6; }
   .hero__inner { padding-top: 44px; padding-bottom: 44px; }
+}
+
+/* Sehr schmale Handys: Eyebrow-Pille darf nicht über den Rand laufen */
+@media (max-width: 380px) {
+  .eyebrow { font-size: .76rem; letter-spacing: .08em; padding-left: 12px; padding-right: 12px; }
 }
 
 /* ---------- Farbschema & Druck ---------- */
