@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Referenzen verwalten · Waldemar Benzel</title>
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="referrer" content="no-referrer" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a2347'/%3E%3Cpath d='M7 19h18M9 19l1.6-4.2A2 2 0 0 1 12.5 13.5h7a2 2 0 0 1 1.9 1.3L23 19' fill='none' stroke='%2357a0e8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='11' cy='21' r='1.8' fill='%23fff'/%3E%3Ccircle cx='21' cy='21' r='1.8' fill='%23fff'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/style.css?v=10" />
+</head>
+<body data-owner="emilianbleimn" data-repo="Benzel-KFZ" data-branch="main">
+  <header class="header is-scrolled">
+    <div class="container header__inner">
+      <a href="index.html" class="brand" aria-label="Zur Website">
+        <img class="brand__logo" src="assets/logo.png" onerror="this.onerror=null;this.src='assets/logo.svg'" alt="Waldemar Benzel" width="200" height="105" />
+      </a>
+      <a href="index.html" class="btn btn--dark">Zur Website</a>
+    </div>
+  </header>
+
+  <main class="vw">
+    <div class="container container--narrow">
+
+      <!-- ===== Schritt 1: Anmelden ===== -->
+      <section id="schritt-anmeldung">
+        <h1 class="vw__titel">Referenzen verwalten</h1>
+        <p class="vw__lead">
+          Hier fügen Sie Fotos vergangener Gutachten zur Website hinzu. Für den ersten Zugang
+          brauchen Sie einmalig den Zugangs-Schlüssel. Danach bleibt er auf diesem Gerät gespeichert.
+        </p>
+
+        <form class="vw__karte" id="anmeldung">
+          <label class="vw__label" for="schluessel">Zugangs-Schlüssel</label>
+          <input class="vw__feld" id="schluessel" type="password" autocomplete="off"
+                 autocapitalize="off" autocorrect="off" spellcheck="false"
+                 placeholder="github_pat_…" />
+
+          <label class="vw__check">
+            <input type="checkbox" id="merken" checked />
+            <span>Auf diesem Gerät gespeichert lassen</span>
+          </label>
+
+          <button class="btn btn--primary btn--lg btn--block" id="anmelden" type="submit">Anmelden</button>
+          <p class="vw__fehler" id="anmeldung-fehler" hidden></p>
+        </form>
+
+        <p class="vw__hinweis">
+          Der Schlüssel wird ausschließlich in diesem Browser gespeichert und nur an GitHub gesendet,
+          wo die Website liegt. Er gilt nur für diese eine Website.
+        </p>
+      </section>
+
+      <!-- ===== Schritt 2: Verwalten ===== -->
+      <section id="schritt-verwaltung" hidden>
+        <div class="vw__kopf">
+          <h1 class="vw__titel">Referenzen verwalten</h1>
+          <button class="vw__abmelden" id="abmelden" type="button">Abmelden</button>
+        </div>
+
+        <div class="vw__karte">
+          <h2 class="vw__h2">Neue Referenz hinzufügen</h2>
+
+          <form id="formular" novalidate>
+            <label class="vw__label" for="titel">Titel <span class="vw__pflicht">*</span></label>
+            <input class="vw__feld" id="titel" type="text" maxlength="80"
+                   placeholder="z. B. Unfallschaden VW Golf" />
+
+            <label class="vw__label" for="beschreibung">Beschreibung</label>
+            <textarea class="vw__feld" id="beschreibung" rows="3" maxlength="300"
+                      placeholder="Kurz beschreiben, worum es ging – ein bis zwei Sätze genügen."></textarea>
+
+            <label class="vw__label" for="kategorie">Kategorie</label>
+            <select class="vw__feld" id="kategorie">
+              <option>Unfall</option>
+              <option>Bewertung</option>
+              <option>Sonstiges</option>
+            </select>
+
+            <label class="vw__label" for="fotos">Fotos <span class="vw__pflicht">*</span></label>
+            <input class="vw__feld vw__feld--datei" id="fotos" type="file" accept="image/*" multiple />
+            <p class="vw__mini-hinweis">Bis zu 8 Fotos. Sie werden automatisch verkleinert – Sie müssen nichts vorbereiten.</p>
+
+            <div class="vw__vorschau" id="vorschau"></div>
+
+            <button class="btn btn--primary btn--lg btn--block" id="speichern" type="submit">Veröffentlichen</button>
+            <p class="vw__status" id="status" hidden></p>
+          </form>
+        </div>
+
+        <div class="vw__karte">
+          <h2 class="vw__h2">Vorhandene Referenzen</h2>
+          <div id="liste"></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer footer--slim">
+    <div class="container footer__bottom">
+      <p>© Waldemar Benzel · Interner Bereich</p>
+      <nav class="footer__legal" aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <noscript>
+    <p style="padding:24px;text-align:center">
+      Für diese Seite wird JavaScript benötigt. Bitte im Browser aktivieren.
+    </p>
+  </noscript>
+
+  <script src="js/verwaltung.js"></script>
+</body>
+</html>

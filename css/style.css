@@ -440,7 +440,18 @@ section[id] { scroll-margin-top: 96px; }
 .gallery__item:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .gallery__img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: #eef5fc; }
 .gallery__img.is-placeholder { object-fit: contain; }
-.gallery__cap { padding: 14px 18px; font-family: var(--font-head); font-weight: 600; color: var(--navy-900); font-size: .98rem; }
+.gallery__cap { padding: 14px 18px 18px; display: grid; gap: 5px;
+  font-family: var(--font-head); font-weight: 600; color: var(--navy-900); font-size: .98rem; }
+.gallery__cap span { font-family: var(--font-body); font-weight: 400; color: var(--muted); font-size: .9rem; line-height: 1.5; }
+.gallery__item { position: relative; }
+.gallery__item.is-klickbar { cursor: zoom-in; }
+.gallery__item.is-klickbar:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.gallery__badge {
+  position: absolute; top: 12px; right: 12px;
+  background: rgba(10, 35, 71, .82); color: #fff;
+  font-family: var(--font-head); font-weight: 600; font-size: .8rem;
+  padding: 4px 10px; border-radius: 999px; pointer-events: none;
+}
 .gallery__hint { margin-top: 26px; text-align: center; color: var(--muted); font-size: .92rem; }
 .gallery__hint code { background: rgba(31,111,208,.08); color: var(--blue-dark); padding: 1px 7px; border-radius: 6px; font-size: .92em; }
 @media (max-width: 860px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
@@ -516,6 +527,82 @@ section[id] { scroll-margin-top: 96px; }
 /* Sehr schmale Handys: Eyebrow-Pille darf nicht über den Rand laufen */
 @media (max-width: 380px) {
   .eyebrow { font-size: .76rem; letter-spacing: .08em; padding-left: 12px; padding-right: 12px; }
+}
+
+/* ---------- Bildergalerie (mehrere Fotos je Referenz) ---------- */
+.lb { position: fixed; inset: 0; z-index: 1200; background: rgba(6, 18, 38, .92); display: grid; place-items: center; padding: 20px; }
+.lb__buehne { position: relative; width: min(1000px, 100%); display: grid; justify-items: center; gap: 14px; }
+.lb__bild { max-width: 100%; max-height: 74vh; border-radius: var(--radius-sm); background: #0a2347; }
+.lb__fuss { color: #dbe7f7; font-size: .95rem; text-align: center; margin: 0; }
+.lb__zaehler { color: #9fb8d8; }
+.lb__zu, .lb__pfeil {
+  background: rgba(255, 255, 255, .12); color: #fff; border-radius: 999px;
+  width: 46px; height: 46px; font-size: 1.6rem; line-height: 1;
+  display: grid; place-items: center; cursor: pointer;
+  transition: background .2s var(--ease);
+}
+.lb__zu:hover, .lb__pfeil:hover { background: rgba(255, 255, 255, .24); }
+.lb__zu:focus-visible, .lb__pfeil:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+/* Bedienelemente am Bildschirmrand – unabhängig vom Bildformat immer gleich */
+.lb__zu { position: fixed; top: 14px; right: 14px; z-index: 2; }
+.lb__pfeil { position: fixed; top: 50%; transform: translateY(-50%); z-index: 2; }
+.lb__pfeil--zurueck { left: 12px; }
+.lb__pfeil--vor { right: 12px; }
+@media (max-width: 600px) {
+  .lb__pfeil { width: 40px; height: 40px; }
+  .lb__bild { max-height: 64vh; }
+}
+
+/* ---------- Interner Bereich: Referenzen verwalten ---------- */
+.vw { padding: 40px 0 72px; background: var(--bg-alt); min-height: 70vh; }
+.vw__titel { font-family: var(--font-head); font-size: clamp(1.5rem, 4vw, 2.1rem); color: var(--navy-900); margin: 0 0 10px; }
+.vw__lead { color: var(--muted); line-height: 1.65; margin: 0 0 24px; }
+.vw__kopf { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
+.vw__kopf .vw__titel { margin: 0; }
+.vw__abmelden { background: none; color: var(--blue-dark); font-weight: 600; font-size: .95rem; text-decoration: underline; cursor: pointer; }
+
+.vw__karte { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 24px; margin-bottom: 24px; }
+.vw__h2 { font-family: var(--font-head); font-size: 1.15rem; color: var(--navy-900); margin: 0 0 18px; }
+
+.vw__label { display: block; font-family: var(--font-head); font-weight: 600; font-size: .92rem; color: var(--navy-900); margin: 16px 0 6px; }
+.vw__karte > .vw__label:first-child, .vw__karte form > .vw__label:first-child { margin-top: 0; }
+.vw__pflicht { color: var(--blue-dark); }
+.vw__feld {
+  width: 100%; font: inherit; color: var(--ink);
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+.vw__feld:focus-visible { outline: 3px solid var(--blue); outline-offset: 1px; border-color: var(--blue); }
+textarea.vw__feld { resize: vertical; line-height: 1.55; }
+.vw__feld--datei { padding: 10px 12px; }
+.vw__mini-hinweis { color: var(--muted); font-size: .85rem; margin: 7px 0 0; }
+.vw__check { display: flex; align-items: center; gap: 9px; margin: 14px 0 20px; color: var(--muted); font-size: .92rem; }
+.vw__check input { width: 18px; height: 18px; }
+
+.vw__vorschau { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 4px; }
+.vw__vorschau-bild { width: 84px; height: 84px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--line); }
+
+.vw__karte .btn { margin-top: 22px; }
+.vw__fehler { color: #b42318; font-size: .92rem; margin: 14px 0 0; }
+.vw__hinweis { color: var(--muted); font-size: .86rem; line-height: 1.6; }
+.vw__status { margin: 16px 0 0; font-size: .93rem; line-height: 1.55; padding: 12px 14px; border-radius: var(--radius-sm); }
+.vw__status--info { background: rgba(31, 111, 208, .08); color: var(--blue-dark); }
+.vw__status--erfolg { background: rgba(34, 197, 94, .12); color: #15803d; }
+.vw__status--fehler { background: rgba(180, 35, 24, .09); color: #b42318; }
+
+.vw__leer { color: var(--muted); margin: 0; }
+.vw__zeile { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-top: 1px solid var(--line); }
+.vw__zeile:first-child { border-top: none; padding-top: 0; }
+.vw__mini { width: 64px; height: 64px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--line); flex: none; background: var(--bg-alt); }
+.vw__zeile-text { display: grid; gap: 3px; min-width: 0; flex: 1; }
+.vw__zeile-text strong { font-family: var(--font-head); font-size: .98rem; color: var(--navy-900); }
+.vw__zeile-text span { color: var(--muted); font-size: .86rem; line-height: 1.45; }
+.vw__loeschen { background: none; color: #b42318; font-weight: 600; font-size: .9rem; text-decoration: underline; cursor: pointer; flex: none; align-self: center; }
+.vw__loeschen:disabled { color: var(--muted); cursor: default; text-decoration: none; }
+@media (max-width: 520px) {
+  .vw__karte { padding: 18px; }
+  .vw__zeile { flex-wrap: wrap; }
+  .vw__loeschen { margin-left: auto; }
 }
 
 /* ---------- Farbschema & Druck ---------- */

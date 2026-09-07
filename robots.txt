@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /Benzel-KFZ/verwaltung.html
 
 Sitemap: https://emilianbleimn.github.io/Benzel-KFZ/sitemap.xml
