@@ -423,6 +423,10 @@ section[id] { scroll-margin-top: 96px; }
 @media (max-width: 980px) { .cards--simple { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .cards--simple { grid-template-columns: 1fr; } }
 
+/* Zwei gleich breite Karten, mittig – für „Worum geht es?" */
+.cards--two { grid-template-columns: repeat(2, 1fr); max-width: 760px; margin-inline: auto; }
+@media (max-width: 560px) { .cards--two { grid-template-columns: 1fr; } }
+
 .contact__info--center { max-width: 540px; margin: 0 auto; }
 .contact-cta { text-align: center; margin-top: 32px; }
 
