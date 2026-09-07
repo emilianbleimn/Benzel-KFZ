@@ -264,14 +264,14 @@
     (function () {
       var pre = document.getElementById("preloader");
       if (!pre) return;
-      var start = Date.now(), MIN = 700;
+      var start = Date.now(), MIN = 2700;   // Mindestanzeigedauer der Lade-Vorschau
       function hide() {
         var wait = Math.max(0, MIN - (Date.now() - start));
         setTimeout(function () { pre.classList.add("is-hidden"); }, wait);
       }
       if (document.readyState === "complete") hide();
       else window.addEventListener("load", hide);
-      setTimeout(hide, 2500); // Fallback, falls 'load' nicht feuert
+      setTimeout(hide, 3200); // Fallback, falls 'load' nicht feuert – deckelt die Anzeige
     })();
 
     // Klick aufs Logo: sanft nach ganz oben (Startseite) – Desktop & Mobile
