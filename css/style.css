@@ -610,6 +610,35 @@ textarea.vw__feld { resize: vertical; line-height: 1.55; }
   .vw__loeschen { margin-left: auto; }
 }
 
+/* ---------- Unfallschaden-Abschnitt ---------- */
+.vorteile { max-width: 820px; margin-inline: auto; }
+.vorteile__titel {
+  font-family: var(--font-head); font-weight: 700; color: var(--navy-900); text-align: center;
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem); margin: clamp(44px, 6vw, 68px) 0 22px;
+}
+.checklist--zwei { grid-template-columns: repeat(2, 1fr); gap: 14px 34px; margin: 0; }
+/* Häkchen oben halten, damit zweizeilige Punkte sauber ausgerichtet sind */
+.checklist--zwei li { align-items: flex-start; }
+.checklist--zwei .ico { margin-top: 2px; }
+@media (max-width: 720px) { .checklist--zwei { grid-template-columns: 1fr; } }
+
+/* Hinführende Frage über der Kernaussage auf der dunklen Karte */
+.about__frage { color: #b9ccec; margin-bottom: 10px; }
+
+/* Hinweiskasten („Kleiner Schaden?") – ruhiger als eine weitere Karte */
+.hinweis {
+  max-width: 820px; margin: clamp(40px, 5vw, 60px) auto 0;
+  background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--blue);
+  border-radius: var(--radius); padding: 24px 26px; box-shadow: var(--shadow-sm);
+}
+.hinweis__titel { font-family: var(--font-head); font-weight: 600; font-size: 1.1rem; color: var(--navy-900); margin: 0 0 8px; }
+.hinweis p { color: var(--muted); margin: 0; }
+
+.schlusssatz {
+  text-align: center; font-family: var(--font-head); font-weight: 600; color: var(--navy-900);
+  font-size: clamp(1.1rem, 2.4vw, 1.4rem); margin: clamp(40px, 5vw, 60px) 0 0;
+}
+
 /* ---------- Farbschema & Druck ---------- */
 :root { color-scheme: light; }
 
