@@ -1,8 +1,9 @@
-# Referenzen selbst pflegen
+# Admin-Übersicht
 
-Auf der Seite **`verwaltung.html`** kann Herr Benzel Fotos vergangener Gutachten
-selbst zur Website hinzufügen — mit Titel, Beschreibung und Kategorie, ohne dass
-jemand anders etwas tun muss.
+Auf der Seite **`verwaltung.html`** (Überschrift „Admin-Übersicht") kann Herr
+Benzel Fotos vergangener Gutachten selbst zur Website hinzufügen — mit Titel,
+Beschreibung und Kategorie, ohne dass jemand anders etwas tun muss. Dort liegt
+außerdem der QR-Code zur Website zum Herunterladen, als SVG und als PNG.
 
 Adresse: <https://benzel-gutachten.de/verwaltung.html>
 
