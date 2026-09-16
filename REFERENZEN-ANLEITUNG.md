@@ -4,7 +4,7 @@ Auf der Seite **`verwaltung.html`** kann Herr Benzel Fotos vergangener Gutachten
 selbst zur Website hinzufügen — mit Titel, Beschreibung und Kategorie, ohne dass
 jemand anders etwas tun muss.
 
-Adresse: <https://emilianbleimn.github.io/Benzel-KFZ/verwaltung.html>
+Adresse: <https://benzel-gutachten.de/verwaltung.html>
 
 Die Seite ist von der Website aus nicht verlinkt und für Suchmaschinen gesperrt
 (`noindex`). Sie ist trotzdem öffentlich erreichbar — geschützt wird sie durch
