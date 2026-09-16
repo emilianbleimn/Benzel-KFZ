@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /Benzel-KFZ/verwaltung.html
+Disallow: /verwaltung.html
 
-Sitemap: https://emilianbleimn.github.io/Benzel-KFZ/sitemap.xml
+Sitemap: https://benzel-gutachten.de/sitemap.xml
