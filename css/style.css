@@ -626,6 +626,18 @@ textarea.vw__feld { resize: vertical; line-height: 1.55; }
 .hinweis__titel { font-family: var(--font-head); font-weight: 600; font-size: 1.1rem; color: var(--navy-900); margin: 0 0 8px; }
 .hinweis p { color: var(--muted); margin: 0; }
 
+/* QR-Code-Bereich in der Verwaltung */
+.vw__qr { display: grid; grid-template-columns: 200px 1fr; gap: 24px; align-items: start; }
+.vw__qr-bild { width: 200px; height: auto; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.vw__qr-text > p { color: var(--muted); margin: 0 0 12px; line-height: 1.6; }
+.vw__qr-text > p strong { color: var(--navy-900); }
+.vw__qr-knoepfe { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+.vw__qr-knoepfe .btn { margin-top: 0; }
+@media (max-width: 560px) {
+  .vw__qr { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .vw__qr-knoepfe { justify-content: center; }
+}
+
 /* ---------- Farbschema & Druck ---------- */
 :root { color-scheme: light; }
 
