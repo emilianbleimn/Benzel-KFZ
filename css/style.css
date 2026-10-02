@@ -654,6 +654,30 @@ textarea.vw__feld { resize: vertical; line-height: 1.55; }
   .vw__qr-knoepfe { justify-content: center; }
 }
 
+/* ---------- Einsatzgebiet ---------- */
+.region__text { color: var(--muted); text-align: center; max-width: 660px; margin: 0 auto; }
+.orte {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  margin: clamp(26px, 4vw, 36px) 0 0;
+}
+.orte li {
+  background: #fff; border: 1px solid var(--line); border-radius: 999px;
+  padding: 7px 16px; font-size: .94rem; font-weight: 500; color: var(--navy-800);
+  box-shadow: var(--shadow-sm);
+}
+.region__hinweis { color: var(--muted); text-align: center; font-size: .94rem; margin-top: 26px; }
+
+/* ---------- Häufige Fragen ---------- */
+/* Grundgerüst steht weiter oben unter „FAQ"; hier nur die Ergänzungen. */
+.faq__item summary:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; }
+.faq__item[open] summary { padding-bottom: 12px; }
+.faq__body p { margin: 0; }
+.faq__body a { color: var(--blue-dark); text-decoration: underline; }
+@media (max-width: 520px) {
+  .faq__item summary { padding: 16px 18px; gap: 12px; font-size: .99rem; }
+  .faq__body { padding: 0 18px 18px; }
+}
+
 /* ---------- Farbschema & Druck ---------- */
 :root { color-scheme: light; }
 
